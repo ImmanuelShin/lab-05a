@@ -133,8 +133,8 @@ let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
   let prodAll = 1;
-  for (let x = 0; x < dynamicArray.length; x++) {
-    const prodOne = multiply(dynamicArray[x], prodAll);
+  for (let x of dynamicArray) {
+    const prodOne = multiply(x, prodAll);
     prodAll = prodOne[0];
   }
   return [prodAll, 'The numbers ' + dynamicArray + ' have a product of ' + prodAll + '.'];
